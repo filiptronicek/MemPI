@@ -2,16 +2,12 @@ var contentDiv = document.getElementById('contentpage');
 var piDiv = document.getElementById('pi');
 var piTimer;
 var piLength;
-var piCountLength = -1;
+var piCountLength = 0;
 var currNumTxt = '';
 var currPosTxt = '';
 $('#conentpage').hide();
 
-var x = document.getElementById('Audio');
-
-function playAudio() {
-	x.play();
-}
+var sfx = new Audio('blob.mp3');
 
 $(document).on('keypress', function(e) {
 	if (e.which == 13) {
@@ -69,12 +65,13 @@ function Main(content, count) {
 			if (piCountLength > -1) {
 				currNumTxt = piray[piCountLength];
 				currPosTxt = piCountLength + 1;
+				sfx.play();
 			}
 			piCountLength++;
 		}
 		document.getElementById('pi').innerHTML = currNumTxt;
 		document.getElementById('pos').innerHTML = currPosTxt;
-		document.getElementById('Audio').play();
+
 		setTimeout(ShowPime, 500);
 	}
 }
