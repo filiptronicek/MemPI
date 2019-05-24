@@ -10,8 +10,13 @@ $('#conentpage').hide();
 var sfx = new Audio('blob.mp3');
 
 $(document).on('keypress', function(e) {
+	console.log('Key pressed');
 	if (e.which == 13) {
-		$.get('250.txt', {}, function(data) {
+		console.log('Enter pressed');
+
+		$.get('milion.txt', {}, function(data) {
+			console.log('Got the file');
+
 			console.log('Showing ' + document.getElementById('input').value + ' digits of pi');
 			console.log(data);
 			$('#inputpage').hide();
@@ -49,6 +54,6 @@ function Main(content, count) {
 		document.getElementById('pi').innerHTML = currNumTxt;
 		document.getElementById('pos').innerHTML = currPosTxt;
 
-		setTimeout(ShowPime, 1);
+		setTimeout(ShowPime, 400);
 	}
 }
