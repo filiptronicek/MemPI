@@ -54,6 +54,6 @@ function Main(content, count) {
 		document.getElementById('pi').innerHTML = currNumTxt;
 		document.getElementById('pos').innerHTML = currPosTxt;
 
-		setTimeout(ShowPime, 400);
+		setTimeout(ShowPime, 800);
 	}
 }
