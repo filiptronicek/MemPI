@@ -21,7 +21,7 @@ $(document).on('keypress', function(e) {
 			console.log(data);
 			$('#inputpage').hide();
 			$('#conentpage').show();
-			Main(data, document.getElementById('input').value);
+			Main(data, (document.getElementById('input').value)+2);
 		});
 	}
 });
