@@ -149,6 +149,6 @@ input {
 #pos {
 	font-size: 20vw;
 	position: absolute;
-	bottom: 5%;
-	left: 50%;
+	bottom: 0.5%;
+	left: 48%;
 }
