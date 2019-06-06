@@ -5,16 +5,26 @@ var piLength;
 var piCountLength = 0;
 var currNumTxt = '';
 var currPosTxt = '';
+var file = '250ts.txt';
 $('#conentpage').hide();
 
 var sfx = new Audio('blob.mp3');
+
 
 $(document).on('keypress', function(e) {
 	console.log('Key pressed');
 	if (e.which == 13) {
 		console.log('Enter pressed');
-
-		$.get('milion.txt', {}, function(data) {
+		if(document.getElementById('input').value <= 250000) {
+			file = "250ts.txt";
+		} else if (document.getElementById('input').value <= 500000) {
+			file = "500ts.txt";
+		} else if (document.getElementById('input').value <= 1000000) {
+			file = "milion.txt";
+		} else {
+			file = "25mil.txt";	
+		}
+		$.get(file, {}, function(data) {
 			console.log('Got the file');
 
 			console.log('Showing ' + document.getElementById('input').value + ' digits of pi');
