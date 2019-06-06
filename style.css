@@ -143,11 +143,11 @@ input {
 	transition: transform var(--inputTransitionDuration), visibility 0ms, z-index 0ms;
 }
 #pi {
-	font-size: 60vw;
+	font-size: 4rem;
 	text-align: center;
 }
 #pos {
-	font-size: 300%;
+	font-size: 20vw;
 	position: absolute;
 	bottom: 5%;
 	left: 50%;
