@@ -8,7 +8,7 @@ var currPosTxt = '';
 var file = '250ts.txt';
 $('#conentpage').hide();
 
-var sfx = new Audio('blob.mp3');
+var sfx = new Audio('sound/blob.mp3');
 
 
 $(document).on('keypress', function(e) {
@@ -24,7 +24,7 @@ $(document).on('keypress', function(e) {
 		} else {
 			file = "25mil.txt";	
 		}
-		$.get(file, {}, function(data) {
+		$.get("/txt/"+	file, {}, function(data) {
 			console.log('Got the file');
 
 			console.log('Showing ' + document.getElementById('input').value + ' digits of pi');
@@ -61,8 +61,8 @@ function Main(content, count) {
 				piCountLength++;
 			}
 		}
-		document.getElementById('pi').innerHTML = currNumTxt;
-		document.getElementById('pos').innerHTML = currPosTxt;
+		document.getElementById('pi').innerHTML = "Position: "+currPosTxt;
+		document.getElementById('pos').innerHTML = currNumTxt;
 
 		setTimeout(ShowPime, 800);
 	}
