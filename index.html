@@ -1,24 +1,36 @@
-<title>π</title>
-<script
-			  src="https://code.jquery.com/jquery-3.3.1.min.js"
-			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-              crossorigin="anonymous">
-</script>
-<head>
-<link rel="stylesheet" href="style.css">
-<script src="index.js"> </script>
-<link rel="icon" href="favicon.png">
-</head>
-<body><div class="Wrapper">
-    <div id="inputpage">
-    <div class="Input">
-      <input type="number" id="input" class="Input-text" min="1" max="1000" value="100" placeholder="π?">
-    </div>
-  </div>
-  <div id="contentpage">
-      <div id="pi"></div>
-      <p id="pos"> </p>
+<html>
+  <head>
+    <title>π</title>
 
-  </div>
-</div>
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.png" />
+  </head>
+
+  <body>
+    <div class="Wrapper">
+      <div id="inputpage">
+        <div class="Input">
+          <input
+            type="number"
+            id="input"
+            class="Input-text"
+            min="1"
+            max="1000"
+            value="100"
+            placeholder="π?"
+          />
+        </div>
+      </div>
+      <div id="contentpage">
+        <div id="pi"></div>
+        <p id="pos"></p>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"
+  ></script>
+  <script src="index.js"></script>
+</html>
