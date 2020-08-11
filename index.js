@@ -1,14 +1,16 @@
-var contentDiv = document.getElementById("contentpage");
-var piDiv = document.getElementById("pi");
-var piTimer;
-var piLength;
-var piCountLength = 0;
-var currNumTxt = "";
-var currPosTxt = "";
-var file = "250ts.txt";
+const  contentDiv = document.getElementById("contentpage");
+const piDiv = document.getElementById("pi");
+
+let piTimer;
+let piLength;
+let piCountLength = 0;
+let currNumTxt = "";
+let currPosTxt = "";
+let file = "250ts.txt";
+
 $("#conentpage").hide();
 
-var sfx = new Audio("sound/blob.mp3");
+const sfx = new Audio("sound/blob.mp3");
 
 $(document).on("keypress", function (e) {
   console.log("Key pressed");
@@ -37,17 +39,15 @@ $(document).on("keypress", function (e) {
   }
 });
 function wait(ms) {
-  var d = new Date();
-  var d2 = null;
+  const d = new Date();
+  let d2 = null;
   do {
     d2 = new Date();
   } while (d2 - d < ms);
 }
 
 function Main(content, count) {
-  console.log("shiiit " + count);
-  var piray = content.split("");
-  console.log(piray);
+  const piray = content.split("");
   piLength = piray.length;
 
   ShowPime();
